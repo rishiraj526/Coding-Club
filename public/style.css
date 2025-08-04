@@ -1,0 +1,41 @@
+.nav{
+    background-color: rgb(131, 222, 222);
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    a{
+        color: white;
+        font-size:1.5rem;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    padding: 0 20px;
+}
+img{
+    border-radius: 50%;
+}
+.nav-left{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.nav-right{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+a:hover{
+    text-decoration: underline;
+}
+img:hover{
+    border-radius: 3px white solid;
+
+}
+b{
+    color:rgb(68, 74, 68);
+}
+.form{
+    width: 80%;
+    margin: 20px auto;
+}
