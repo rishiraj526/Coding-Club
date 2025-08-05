@@ -1,35 +1,38 @@
 <% layout("../layout/boilerplate") -%>
-<body>
-    <h1>Register Yourself</h1>
-    <div class="fcontainer">
+
+  <body>
     
 
-    <div class="f-form">
-      <h2>Create an Account</h2>
-      <p class="f-login">Already have an account? <a href="#">Log in</a></p>
 
-      <form action="/server">
-        <input type="text" name="name" placeholder=" Your Name"  required><br>
-        <input type="text" name="Registration Number" placeholder="Registration Number" required><br>
-        <input type="email" name="email" placeholder="Email" required><br>
-        <input type="password" name="password" placeholder="Enter your password" required>
+    <div class="fcontainer">
 
-        <div class="f-checkbox">
-          <input type="checkbox" id="terms" name="terms" checked required>
-          <label for="terms">I agree to the <a href="#">Terms & Conditions</a></label>
+
+      <div class="f-form">
+        <h2>Create an Account</h2>
+        <p class="f-login">Already have an account? <a href="#">Log in</a></p>
+
+        <form action="/register" method="post">
+          <input type="text" name="name" placeholder=" Your Name" required><br>
+          <input type="text" name="Registration Number" placeholder="Registration Number" required><br>
+          <input type="email" name="email" placeholder="Email" required><br>
+          <input type="password" name="password" placeholder="Enter your password" required>
+
+          <div class="f-checkbox">
+            <input type="checkbox" id="terms" name="terms" checked required>
+            <label for="terms">I agree to the <a href="#">Terms & Conditions</a></label>
+          </div>
+
+          <button type="submit" class="f-submit">Create Account</button>
+        </form>
+
+        <p class="f-register">Or register with</p>
+
+        <div class="f-extra">
+          <button><img src="https://img.icons8.com/color/20/google-logo.png" alt="google"> Google</button>
+
         </div>
-
-        <button type="submit" class="f-submit">Create Account</button>
-      </form>
-
-      <p   class="f-register">Or register with</p>
-
-      <div class="f-extra">
-        <button><img src="https://img.icons8.com/color/20/google-logo.png" alt="google"> Google</button>
-        
       </div>
     </div>
-  </div>
 
 
-</body>
+  </body>
