@@ -1,5 +1,5 @@
-h1{
-    color: red;
+h1 {
+  color: red;
 }
 
 body {
@@ -7,6 +7,7 @@ body {
   display: flex;
   flex-direction: column;
   font-family: 'roboto', sans-serif;
+  background-color: #020002;
 }
 
 .main-content {
@@ -22,16 +23,17 @@ body {
   z-index: 1;
   padding: 0 3rem !important;
 }
+
 @media (max-width: 768px) {
-    #navbarNavAltMarkup{
+  #navbarNavAltMarkup {
     flex-grow: 1;
-    z-index: 1  !important;
+    z-index: 1 !important;
     background-color: rgb(185, 185, 185) !important;
     width: 100%;
     color: white !important;
     border-radius: 5px !important;
     padding: 0.5rem !important;
-}
+  }
 }
 
 /*footer */
@@ -40,10 +42,12 @@ footer {
   padding: 2rem;
   text-align: center;
   width: 100%;
-  margin-top: auto; /* Push footer to bottom */
+  margin-top: auto;
+  /* Push footer to bottom */
   position: relative;
   bottom: 0;
 }
+
 .f-info-links a {
   text-decoration: none;
   color: #222222;
@@ -53,6 +57,7 @@ footer {
 .f-info-links a:hover {
   text-decoration: underline;
 }
+
 .f-info {
   display: flex;
   flex-direction: column;
@@ -61,9 +66,113 @@ footer {
   background-color: #f7f7f7;
   gap: 1rem;
   padding: 1rem;
-  
+
 }
+
 .f-info-social i {
   font-size: 1.2rem;
   margin-right: 1rem;
+}
+
+/*registration form*/
+
+ 
+
+
+.fcontainer {
+  display: flex;
+  width: 90%;
+  max-width: 500px;
+  background-color: #020002;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid white;
+   /* justify-content: center; 
+  align-items: center;  */
+  margin: 20px ;
+  color: #fff;
+  margin-left: 520px;
+ 
+}
+
+
+
+
+
+.f-form {
+  flex: 1 1 60%;
+
+  background-color: #0d0d0d;
+  padding: 40px 30px;
+  text-align: start;
+}
+
+
+form {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  text-align: start;
+}
+
+input {
+  padding: 12px;
+  margin-bottom: 16px;
+  background-color: #020002;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+
+}
+input::placeholder{
+  color: #ababab;
+  padding:5px;
+  font-size: 15px;
+}
+
+
+.f-checkbox {
+  padding: 20px;
+
+}
+
+
+.f-submit {
+  background-color: #7c5dfa;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 18px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.f-register {
+  text-align: center;
+
+
+  color: #aaa;
+}
+
+
+
+.f-extra button {
+
+  padding: 10px;
+  border: none;
+  background-color: #2e2c3f;
+  color: white;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+
+.f-login a {
+  color: blue;
+  text-decoration: none;
 }
