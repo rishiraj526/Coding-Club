@@ -36,7 +36,7 @@ span:hover{
   display: flex;
   align-items: center;
   gap: 10px;
-  font-size: 20px;
+  font-size: 24px;
   font-weight: bold;
   i{
     color: #6C4EFF;
@@ -62,29 +62,15 @@ span:hover{
 }
 
 /* Button */
-.btn {
+button {
   background: #6C4EFF;
-  width: 110px;
-  height: 41px;
-  border-radius: 12px;
-  text-align: center;
-
-padding: 8.5px 10px;
-  
+  width: 100px;
+  height: 30px;
+  border-radius: 10px;
+  border: none;
   color: white;
-  
-  text-decoration: none;
-  transition:  ease-in,0.3s;
 }
 
-.btn:hover {
-  transition: ease-in,0.3s;
-  background-color: #6C4EFF;
-    color: #ff5e57;
-
-
-
-}
 
 /* Hamburger */
 .hamburger {
@@ -97,7 +83,7 @@ padding: 8.5px 10px;
 /* Mobile */
 @media (max-width: 768px) {
   .nav-links,
-  .btn {
+  button {
     display: none;
   }
 
@@ -114,10 +100,6 @@ padding: 8.5px 10px;
     text-align: center;
   }
 
-  .btn {
-    display: inline-block;
-    margin: 0 auto;
-  }
 
   .hamburger {
     display: block;
