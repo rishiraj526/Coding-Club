@@ -1,0 +1,12 @@
+<% layout("../layout/boilerplate") -%>
+
+<body>
+  <div class="dashboard-container">
+    <h2>Welcome, <%= student.name %> 👋</h2>
+    <p>Email: <%= student.email %></p>
+    <p>Branch: <%= student.branch %></p>
+    <p>Semester: <%= student.semester %></p>
+
+    <a href="/logout" class="btn btn-danger">Logout</a>
+  </div>
+</body>

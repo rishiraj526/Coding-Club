@@ -11,12 +11,30 @@
 
         <form action="/register" method="post">
           <input type="text" name="name" placeholder=" Your Name" required><br>
+          <input type="text" name="username" placeholder="User Name" required><br>
           <input type="text" name="phone" placeholder="Mobile Number" required><br>
           <input type="email" name="email" placeholder="Email" required><br>
           <input type="password" name="password" placeholder="Enter your password" required><br>
-          <input type="password" name="confirmPassword" placeholder="Confirm your password" required><br>
-          <input type="number" name="sem" placeholder="Semester" required><br>
-          <input type="text" name="branch" placeholder="Branch" required><br>
+          <select name="branch">
+            <option value="" disabled selected>Select your branch</option>
+            <option value="ie">EIE</option>
+            <option value="ec">ECE</option>
+            <option value="ee">EE</option>
+            <option value="ce">CE</option>
+            <option value="me">ME</option>
+            <option value="cs">CSE</option>
+          </select><br>
+          <select name="semester">
+            <option value="" disabled selected>Select your semester</option>
+            <option value="1">1st Semester</option>
+            <option value="2">2nd Semester</option>
+            <option value="3">3rd Semester</option>
+            <option value="4">4th Semester</option>
+            <option value="5">5th Semester</option>
+            <option value="6">6th Semester</option>
+            <option value="7">7th Semester</option>
+            <option value="8">8th Semester</option>
+          </select><br>
           <button type="submit" class="btn btn-success">Create Account</button>
         </form>
       </div>

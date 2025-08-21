@@ -6,11 +6,15 @@ const studentRoutes = require('./routes/studentRoutes');
 const session = require('express-session');
 const mongoose = require('mongoose');
 const flash = require('connect-flash');
+const studentModel = require('./model/studentModel');
+const passport = require('passport');
+const LocalStrategy = require('passport-local').Strategy;
 
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
+
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
@@ -39,6 +43,14 @@ const sessionOption = {
 } //configure session options
 
 app.use(session(sessionOption));
+
+app.use(flash());
+app.use(passport.initialize());
+app.use(passport.session());
+passport.use(new LocalStrategy(studentModel.authenticate()));
+passport.serializeUser(studentModel.serializeUser()); 
+passport.deserializeUser(studentModel.deserializeUser());
+
 
 app.listen(8000, (req, res) => {
    console.log(`Server is running on port ${8000}`);
