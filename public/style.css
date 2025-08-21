@@ -230,10 +230,10 @@ button {
 .f-form{
   width: 50%;
   height: fit-content;
-  background-color: #292929;
+  background-color: #000000;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: rgb(67, 67, 67) 0px 4px 12px;
+  border: 1px solid #333;
   display: flex;
   gap: 1em;
   flex-direction: column;
@@ -259,7 +259,7 @@ form input , form select {
   border: none;
   padding: 0 10px;
   font-size: 16px;
-  background-color: #525252;
+  background-color: #ffffff;
   color: #333;
   transition: background-color 0.3s, color 0.3s;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
