@@ -8,7 +8,7 @@
 body {
   font-family: 'Segoe UI', sans-serif;
   background: #0F0F0F;
- ;
+  color: white;
 }
 
 /* Navbar */
@@ -157,6 +157,8 @@ button {
   background-color: #171717;
   color: white;
   padding: 20px 0;
+  position: relative;
+  bottom: 0;
 }
 .footer-upper{
   display: flex;
@@ -180,7 +182,6 @@ button {
 .footer-lower{
   border-top: 0.5px solid white;
   text-align: center;
-  height: 100px;
   width: 100%;
   
 }
@@ -216,23 +217,23 @@ button {
 
 /* Registration style  */
 
-.fcontainer{
+.register-container {
   width: 100%;
   height: 90vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #333333b8;
   padding: 1rem 0;
+  margin: 5vh 0;
 }
 
 .f-form{
-  width: 400px;
+  width: 50%;
   height: fit-content;
-  background-color: #fff;
+  background-color: #292929;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  box-shadow: rgb(67, 67, 67) 0px 4px 12px;
   display: flex;
   gap: 1em;
   flex-direction: column;
@@ -251,14 +252,14 @@ form{
     cursor: pointer;
   }
 }
-form input &, form select {
+form input , form select {
   width: 100%;
   height: 40px;
   border-radius: 10px;
   border: none;
   padding: 0 10px;
   font-size: 16px;
-  background-color: #f0f0f0;
+  background-color: #525252;
   color: #333;
   transition: background-color 0.3s, color 0.3s;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
@@ -269,6 +270,14 @@ form input:focus {
   background-color: #fff;
   color: #000;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 12px;
+}
+.login-container {
+  width: 100%;
+  margin: 5vh 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
 }
 
 @media (max-width: 600px) {
@@ -281,29 +290,3 @@ form input:focus {
 }
 
 /* Dashboard style */
-.dashboard-container {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: #0F0F0F;
-  color: white;
-}
-.dashboard-container h2 {
-  font-size: 36px;
-  margin-bottom: 20px;
-}
-.dashboard-container p {
-  font-size: 20px;
-  margin: 10px 0;
-}
-.dashboard-container a {
-  color: #6C4EFF;
-  text-decoration: none;
-  font-size: 18px;
-}
-.dashboard-container a:hover {
-  text-decoration: underline;
-}

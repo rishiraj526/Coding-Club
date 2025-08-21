@@ -1,12 +1,146 @@
 <% layout("../layout/boilerplate") -%>
+  <style>
+    .dashboard-container {
+      max-width: 900px;
+      margin: 40px auto;
+      background: #e4e4e4;
+      border-radius: 18px;
+      box-shadow: 0 8px 32px rgba(60, 72, 88, 0.12);
+      padding: 40px 32px;
+    }
 
-<body>
-  <div class="dashboard-container">
-    <h2>Welcome, <%= student.name %> 👋</h2>
-    <p>Email: <%= student.email %></p>
-    <p>Branch: <%= student.branch %></p>
-    <p>Semester: <%= student.semester %></p>
+    .dashboard-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #e3e7ed;
+      padding-bottom: 18px;
+      margin-bottom: 32px;
+    }
 
-    <a href="/logout" class="btn btn-danger">Logout</a>
-  </div>
-</body>
+    .dashboard-header h1 {
+      font-size: 2.2rem;
+      color: #2d3748;
+      margin: 0;
+      font-weight: 700;
+    }
+
+    .dashboard-header p {
+      font-size: 1.1rem;
+      color: #4a5568;
+      margin: 0 24px 0 0;
+      font-weight: 500;
+    }
+
+    .btn-danger {
+      background: #e53e3e;
+      color: #fff;
+      padding: 10px 22px;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+
+    .btn-danger:hover {
+      background: #c53030;
+    }
+
+    .dashboard-content {
+      display: flex;
+      gap: 32px;
+      flex-wrap: wrap;
+    }
+
+    .dashboard-card {
+      background: #f7fafc;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(60, 72, 88, 0.07);
+      padding: 28px 24px;
+      flex: 1 1 320px;
+      min-width: 320px;
+    }
+
+    .dashboard-card h2 {
+      font-size: 1.3rem;
+      color: #2b6cb0;
+      margin-bottom: 18px;
+      font-weight: 600;
+    }
+
+    .dashboard-card ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .dashboard-card li {
+      font-size: 1.05rem;
+      color: #2d3748;
+      margin-bottom: 10px;
+      padding: 8px 0;
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    .dashboard-card li:last-child {
+      border-bottom: none;
+    }
+
+    .dashboard-card strong {
+      color: #3182ce;
+      font-weight: 600;
+      margin-right: 8px;
+    }
+  </style>
+
+  <body>
+    <div class="dashboard-container">
+      <div class="dashboard-header">
+        <h1>Dashboard</h1>
+        <p>Welcome, <%= user.name %>
+        </p>
+        <a href="/logout" class="btn btn-danger">Logout</a>
+      </div>
+      <div class="dashboard-content">
+        <div class="dashboard-card">
+          <h2>About You</h2>
+          <ul>
+            <li><strong>Name:</strong>
+              <%= user.name %>
+            </li>
+            <li><strong>Email:</strong>
+              <%= user.email %>
+            </li>
+            <li><strong>Username:</strong>
+              <%= user.username %>
+            </li>
+            <li><strong>Phone:</strong>
+              <%= user.phone %>
+            </li>
+            <li><strong>Branch:</strong>
+              <%= user.branch %>
+            </li>
+            <li><strong>Semester:</strong>
+              <%= user.semester %>
+            </li>
+          </ul>
+        </div>
+        <div class="dashboard-card">
+          <h2>Quick Links</h2>
+          <ul>
+            <li><a href="/profile/edit">Edit Profile</a></li>
+            <li><a href="/events">Upcoming Events</a></li>
+            <li><a href="/resources">Club Resources</a></li>
+          </ul>
+          <hr>
+          <h2>Notifications</h2>
+          <ul>
+            <li>No new notifications</li>
+          </ul>
+        </div>
+
+
+      </div>
+  </body>

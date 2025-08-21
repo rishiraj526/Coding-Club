@@ -7,6 +7,8 @@ const { authenticate } = require('passport');
 const passport = require('passport');
 const isLoggedIn = require('../middleware'); // Importing middleware for authentication
 
+
+
 // Importing the student controller
 
 router.get('/register', (req, res) => {
@@ -56,7 +58,7 @@ router.get('/logout', (req, res, next) => {
 
 
 router.get('/dashboard', isLoggedIn, (req, res) => {
-    res.render("dashboard", { student: req.user });
+    res.render("dashboard", { user: req.user });
 });
 
 module.exports = router;

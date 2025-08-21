@@ -51,6 +51,15 @@ passport.use(new LocalStrategy(studentModel.authenticate()));
 passport.serializeUser(studentModel.serializeUser()); 
 passport.deserializeUser(studentModel.deserializeUser());
 
+// Middleware to pass flash messages and user info to all views
+app.use((req, res, next) => {
+   res.locals.success = req.flash('success');
+   res.locals.error = req.flash('error');
+   res.locals.user = req.user; // Make user available in all views
+   next();
+});
+
+
 
 app.listen(8000, (req, res) => {
    console.log(`Server is running on port ${8000}`);
