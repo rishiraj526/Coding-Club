@@ -22,7 +22,7 @@ router.post('/register', (req, res) => {
         studentModel.register(newStudent, password, (err, student) => {
             if (err) {
                 console.error("Error registering student:", err);
-                req.flash('error', 'Registration failed. Please try again.');
+                req.flash('error', err.message);
                 return res.redirect('/register');
             }
             req.flash('success', 'Registration successful! You can now log in.');
@@ -30,7 +30,8 @@ router.post('/register', (req, res) => {
         });
     } catch (error) {
         console.error("Error in registration process:", error);
-        req.flash('error', 'An error occurred during registration. Please try again.');
+        
+        req.flash('error', error.message);
         res.redirect('/register');
     }
 
